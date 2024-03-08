@@ -38,8 +38,8 @@ def convert_pngs_to_pdfs(img_folder_path:str, pdf_folder_path:str):
         print(f"Successfully converted {img_path} to {pdf_path}")
 
 if __name__ == "__main__":
-    img_folder_path = "C:\png-pdf\images"
-    pdf_folder_path = "C:\png-pdf\pdfs"
+    img_folder_path = "C:\images_to_pdfs\images"
+    pdf_folder_path = "C:\images_to_pdfs\pdfs"
 
     rename_pngs_to_jpgs(img_folder_path)
     convert_pngs_to_pdfs(img_folder_path, pdf_folder_path)
