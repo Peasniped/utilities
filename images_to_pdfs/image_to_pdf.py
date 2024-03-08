@@ -6,7 +6,7 @@ import os
 
 def rename_pngs_to_jpgs(img_folder_path:str):
     all_files = os.listdir(img_folder_path)
-    jpgs = [file for file in all_files if ".jpg" in file or ".jpeg" in file]
+    jpgs = [file.lower() for file in all_files if ".jpg" in file or ".jpeg" in file]
 
     if jpgs == []:
         print(f"No files with extensions '.jpg' or '.jpeg' in folder {img_folder_path}\n")
@@ -20,7 +20,7 @@ def rename_pngs_to_jpgs(img_folder_path:str):
 
 def convert_pngs_to_pdfs(img_folder_path:str, pdf_folder_path:str):
     all_files = os.listdir(img_folder_path)
-    files = [file for file in all_files if ".png" in file]
+    files = [file.lower for file in all_files if ".png" in file]
 
     for file in files:
         img_path = img_folder_path + "\\" + file
